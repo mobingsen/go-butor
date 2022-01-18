@@ -4,15 +4,14 @@ import (
 	"context"
 	"errors"
 	"github.com/gorilla/websocket"
-	"go-topics/pkg/client"
 	v1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/util/json"
 	"k8s.io/client-go/kubernetes/scheme"
 	"k8s.io/client-go/tools/remotecommand"
-	"k8s.io/klog/v2"
 	"net/http"
 	"sync"
+	"webssh/pkg/client"
 )
 
 func GetPods(namespaceName string) ([]v1.Pod, error) {

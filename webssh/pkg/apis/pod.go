@@ -2,8 +2,8 @@ package apis
 
 import (
 	"github.com/gin-gonic/gin"
-	"go-topics/pkg/service"
 	"net/http"
+	"webssh/pkg/service"
 )
 
 func GetPods(c *gin.Context) {

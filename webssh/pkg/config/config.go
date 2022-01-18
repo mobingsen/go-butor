@@ -3,7 +3,6 @@ package config
 import (
 	"io/ioutil"
 	"k8s.io/apimachinery/pkg/util/yaml"
-	"k8s.io/klog/v2"
 	"strconv"
 )
 // go get github.com/gin-gonic/gin

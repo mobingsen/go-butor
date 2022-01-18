@@ -2,8 +2,8 @@ package router
 
 import (
 	"github.com/gin-gonic/gin"
-	"go-topics/pkg/apis"
-	"go-topics/pkg/middleware"
+	"webssh/pkg/apis"
+	"webssh/pkg/middleware"
 )
 
 func InitRouter(r *gin.Engine) {

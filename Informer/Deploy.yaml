@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: buxybox
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: busybox
+  template:
+    metadata:
+      labels:
+        app: busybox
+    spec:
+      containers:
+        - name: busybox
+          image: registry.cn-hangzhou.aliyuncs.com/waibizi/busybox
+          args:
+            - /bin/sh
+            - -c
+            - touch /tmp/healthy; sleep 3000; rm -rf /tmp/healthy; sleep 1000
+          livenessProbe:
+            exec:
+              command:
+                - cat
+                - /tmp/healthy
+              initialDeplaySeconds: 5
+              periodSeconds: 5

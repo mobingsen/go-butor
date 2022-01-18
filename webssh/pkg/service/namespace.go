@@ -2,10 +2,10 @@ package service
 
 import (
 	"context"
-	"go-topics/pkg/client"
 	v1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/klog/v2"
+	"webssh/pkg/client"
 )
 
 func GetNamespace() ([]v1.Namespace, error) {
